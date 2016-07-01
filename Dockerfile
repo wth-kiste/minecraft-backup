@@ -30,3 +30,4 @@ WORKDIR $MC_PATH
 COPY backup.sh $MC_PATH/../
 
 ENTRYPOINT ["../backup.sh"]
+
