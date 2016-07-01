@@ -71,6 +71,8 @@ if [[ $# -gt 0 && ${1:-} == "purge" ]]; then
 fi
 
 
-exec "$@"
+if [[ $# -eq 0 ]]; then
+  exec "$@"
+fi
 
 
