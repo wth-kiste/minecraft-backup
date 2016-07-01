@@ -66,7 +66,7 @@ if [[ $# -gt 0 && ${1:-} == "backup" ]]; then
 fi
 
 if [[ $# -gt 0 && ${1:-} == "purge" ]]; then
-  borg prune --stats -v --remote-path $rpath $REPOSITORY --prefix ${MC_NAME}- \
+  $borg prune --stats -v --remote-path $rpath $REPOSITORY --prefix ${MC_NAME}- \
       --keep-daily=7 --keep-weekly=4 --keep-monthly=2
 fi
 
